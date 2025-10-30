@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Werkplek Gezocht HA</title>
+  <link rel="icon" href="img/favicon.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Permanent+Marker&family=Rowdies:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta name="author" content="Kyano Hendriks">
+  <meta name="description" content="Vind rustige werkplekken in Haarlem met wifi, stopcontacten en sfeer. Voor zzp'ers en remote workers.">
+  <meta name="keywords" content="werkplek, Haarlem, zzp, wifi, coworking">
+
+</head>
+<body>
+  <figure id="hp">
+  <img src="img/Home.png" alt="Homepagina icoon" class="logo" title="Homepagina">
+  <figcaption>Het logo van Werkplek Gezocht</figcaption>
+</figure>
+
+  <header>
+    <nav>
+    <a href="index.html"><img id="hd" class="logoP" alt="Homepagina icoon" src="img/Home.png" title="Homepagina"></img></a>
+    <a id="hp" href="index.html">Home</a>
+    <a id="hp" href="contact.html">Contact</a>
+    </nav>
+      <button onclick="showmenu()" id="navbutton">
+        <img class="menubutton" src="img/hamburger.png" alt="Menu" title="Menu">
+      </button>
+
+  </header>
+
+     <ul id="menu" class="menu">
+      <li id="hd"><a href="index.html">Home</a></li>
+      <li><a href="wvlw.html">Werkplekken voor laptop en wifi</a></li>
+      <li><a href="wmza.html">Werkplekken met andere zzp'ers</a></li>
+      <li><a href="wmv.html">Werkplekken met voorzieningen</a></li>
+      <li><a href="zegwv.html">Zelf een goede werkplek vinden</a></li>
+      <li id="hd"><a href="contact.html">Contact</a></li>
+    </ul>
+
+  <main role="main">
+    <section class="borderbottom">
+    <article><h1>Help ons!</h1> <p><em>Als jij nog een aantal goede werkplekken kent in haarlem zouden wij dat graag willen weten. daarvoor kunt u contact met ons opnemen door het formulier hier beneden in te vullen! Heb je een tip voor een fijne werkplek? Ken jij een café, bibliotheek, of andere rustige plek waar het heerlijk werken is? Laat het ons weten! Jouw input helpt ons om anderen te inspireren en te ondersteunen in hun zoektocht naar de perfecte werkplek.</p></article>
+    <section id="hd" class="borderbottom"></section>
+    <aside id="hp"><img src="img/img4.png" alt="Laptop img1" class="images" title="IMG4"></aside>
+    </section>
+
+    <section>
+    <aside id="hp"><img src="img/img5.png" alt="laptop img2" class="images" title="IMG5"></aside>
+    
+    <article><h1>Vragen of samenwerkingen?</h1><p>Wil je samenwerken, heb je een vraag over onze missie of wil je dat jouw locatie op ons platform komt? We denken graag met je mee. Of je nu eigenaar bent van een locatie, werkt bij een gemeente, of gewoon enthousiast bent over ons idee — we horen graag van je.</p> </article>
+    <section id="hd" class="borderbottom"></section>
+    <aside id="hd"><img src="img/img5.png" alt="Stroom img" class="images" title="IMG2"></aside>
+    </section>
+    <section id="nogrid">
+    <article class="form" id="nogrid"><h1>Stuur ons een bericht!</h1><p> Gebruik het contactformulier hieronder of stuur ons een e-mail via [.....]. We doen ons best om binnen 48 uur te reageren. Samen maken we het makkelijker om in alle rust en focus te werken, waar je ook bent.</article>
+    </section>
+     <form>
+      <legend>Contact formulier:</legend>
+      <input type="email" name="email" placeholder="E-mail"  id="">
+      <input id="aanhef" type="text" name="aanhef" placeholder="Aanhef">
+      <input class="naaminput" type="text" name="naam" placeholder="Naam" id="naam">
+      <input type="number" name="nummer" placeholder="Telefoon nummer">
+      <label for="bericht">Typ hier uw bericht!:</label><br>
+      <textarea type="text" name="bericht" placeholder="Bericht" id="bericht"></textarea>
+      <button class="indienen" type="submit">Indienen</button>
+     </form>
+    
+  </main>
+
+  <footer>
+    <a>&copy; 2025 WG </a>
+    <a id="hp" href="contact.html" class="contactfooter">Contact</a>
+  </footer>
+</body>
+</html>
+
+<script>
+  const menu = document.getElementById('menu');
+  const menu2 = document.getElementById('menu2');
+  
+  function showmenu() { 
+    menu.classList.toggle('visible'); 
+    menu2.classList.remove('visible');
+  }
+  function showmenu2() {
+     menu.classList.remove('visible'); 
+    menu2.classList.toggle('visible'); 
+  }
+
+   document.addEventListener('click', function(event) {
+    const click = navbutton.contains(event.target);
+    const click2 = werkbutton.contains(event.target);
+
+    if (!click) {
+      menu.classList.remove('visible');
+      
+    }
+    if (!click2) {
+      menu2.classList.remove('visible');
+    }
+  });
+</script>
